@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class JokeController {
 
-    private JokeService jokeService;
+    private JokeService jokeService;//not impl!
 
     @Autowired
     public JokeController(JokeService jokeService) {
@@ -23,7 +23,7 @@ public class JokeController {
                             //knows what to insert in the place of {joke}
         model.addAttribute("joke", jokeService.getJoke());
 
-        return "chucknorris";//show us the view for chucknorris
+        return "chucknorris";//show us the view for chucknorris,name of html file
     }
 
 }
